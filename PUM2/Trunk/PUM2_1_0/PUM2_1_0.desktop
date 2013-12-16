@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=PUM2_1_0
+Icon=icon-launcher-gallery
+Exec=invoker --type=silica-qt5 -s /usr/bin/PUM2_1_0
+Comment=Sailfish UI application
+
+
