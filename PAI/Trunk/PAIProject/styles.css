@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2013-10-25, 13:35:48
+    Author     : Atom
+*/
+body {background-color: gray;}
+#title {margin-left: auto; margin-right: auto; text-align: center}
+#horizontalmenu {margin-left: auto; margin-right: auto;}
+#horizontalmenu ul {margin: 10px 50px 10px; padding: 0; list-style-type: none; list-style-image: none}
+#horizontalmenu li {display: inline}
+#horizontalmenu ul li a {textdecoration: none; margin: 5px; padding: 5px 20px 5px 20px;
+                        color: white; background: black}
+#horizontalmenu ul li a:hover {color:white; background:red }
+
+
+#register label.error {color: red;}
+#register input.error {border:3px solid red;}
+#add label.error {color: red;}
+.formComment label.error {color:red}
+#add input.error {border:3px solid red;}
+#file {color:white;}
+
+#rankDiv {background-color: black; margin-left: auto; margin-right: auto; margin-top: 20px; width: 70%; text-align: center}
+#page {background-color: black; margin-left: auto; margin-right: auto; width:70%; padding-top: 20px; padding-bottom: 20px;}
+//#page:first-child {margin-top: 20px;}
+//#page:last-child {margin-bottom: 20px;}
+
+#submitinput {margin-left: 20px;}
+.labelinputdata {margin-left: 20px; color: white}
+.inputdata {margin-left: 20px;}
+.menuDiv {margin-left: auto; margin-right: auto; text-align: center;}
+.newDivClass {background-color: white; width: 400px; height: 600px; margin-top: 40px; margin-left: auto; margin-right: auto;  text-align: center; }
+.newDivClass img {width:80%; height:60%}
+.labelImage {text-align: center; border:transparent}
+//.newDivClass img{width: 300; height: 400}
+
+#pageimages ul {list-style-type:none;  float:left; position:relative; left:46%;}
+#pageimages li {float:left; margin:0 5px; position:relative; right:50%; color: white;}
+#pageimages li.current a{color:gray;}
+div.clear {clear:both;}
+.check {margin-top: 20px; margin-bottom: 5px; margin-left: 5px}
+#pageimages {margin-top: 40px}
+
+
+
+
+
