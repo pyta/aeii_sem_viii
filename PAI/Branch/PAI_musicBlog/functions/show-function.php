@@ -135,7 +135,7 @@
 						if(isset($_GET['action']))
 							$showUSPaction = $_GET['action'];
 							
-						ShowUserSessionPage(showUSPaction);
+						ShowUserSessionPage($showUSPaction);
 						break;
 						
 					case 'users':

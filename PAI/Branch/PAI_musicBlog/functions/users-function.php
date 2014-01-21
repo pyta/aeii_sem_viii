@@ -25,11 +25,22 @@
 	
 	function ChangeDate($someDate)
 	{
-		$Elements = explode('-', $someDate);
-		$RomMonths = array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII');
-		$Elements[1] = intval($Elements[1]);
-		$NewDate = $Elements[2].' '.$RomMonths[$Elements[1] - 1].' '.$Elements[0];
-		return $NewDate;
+		try
+		{
+			$Elements = explode('-', $someDate);
+			$RomMonths = array('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII');
+			$Elements[1] = intval($Elements[1]);
+			
+			if($Elements[1] == 0)
+				return "[Nie podano]";
+			
+			$NewDate = $Elements[2].' '.$RomMonths[$Elements[1] - 1].' '.$Elements[0];
+			return $NewDate;
+		}
+		catch(Exception $ex)
+		{
+			return $someDate;
+		}
 	}
 	
 	/* Funkcja wyświetla okno z informacja przekazana przez argument */
@@ -168,13 +179,18 @@
 	/* Funkcja wyświetlająca danemu użytkownikowi (argument $login) panel z którego może podejrzeć swoje dane lub się wylogować */
 	
 	function ShowUserPanel($login)
-	{
+	{	
 		$query = "Select id, avatar From users Where login = '$login'";
 		$zapytanie = @mysql_query($query);
 		if($zapytanie) {
+		
 			$wynik = mysql_fetch_array($zapytanie);
+			
 			$id		= $wynik[0];
 			$avatar = $wynik[1];
+
+			if($avatar == "")
+				$avatar = "_def.jpg";
 		}
 		
 		$query = "Select count(*) From messages Where recipientId = '$id' And state = '0'";
@@ -189,7 +205,7 @@
 		echo 
 		"<table style = 'width:250px;'>",
 			'<tr>',
-				"<td style = 'width:120px; text-align:center;'><img src = 'images/avatars/$avatar' style = 'width: 100px; height: 100px;'></td>",
+				"<td style = 'width:120px; text-align:center;'><img src = 'images/avatars/",$avatar,"' style = 'width: 100px; height: 100px;'></td>",
 				"<td style = 'text-align: center;'><b><a href = 'subpage.php?page=users&login=$login'>", $login, "</a></b></td>",
 			'</tr>',
 			'<tr>',

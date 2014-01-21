@@ -2,7 +2,7 @@
 	$host = '127.0.0.1';
 	$login = 'root';
 	$password = 'vertrigo';
-	$database = 'leverte_13';
+	$database = 'laverte_13';
 	
 	$connect = @mysql_connect ($host, $login, $password);
 	$error = mysql_error();

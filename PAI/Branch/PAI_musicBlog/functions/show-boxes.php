@@ -72,17 +72,17 @@
 		?>
 		<div id="box">
 			<div class="header">
-				<h2><a href="subpage.php?page=galleries&id=<?=$id?>"><?php echo $title; ?></a></h2>
+				<h2><a href="subpage.php?page=galleries&id=<?php echo $id ?>"><?php echo $title; ?></a></h2>
 			</div>
 			<div class="content">
 				<div class="text">
-					<img src=<?="$patch/$thumbnail"?> class="thumbnail" />
+					<img src=<?php echo "$patch/$thumbnail" ?> class="thumbnail" />
 					<?php echo $description; ?>
 				</div>
 				
 			</div>
 			<p id="inf" style="background:url(images/content-bg.png) repeat-y;">
-					dodano: <?php echo "$D $M, $Y r."; ?> w kategorii: <?php echo $patch; ?>, <a href="subpage.php?page=galleries&id=<?=$id?>">przeglądaj galerie</a>
+					dodano: <?php echo "$D $M, $Y r."; ?> w kategorii: <?php echo $patch; ?>, <a href="subpage.php?page=galleries&id=<?php echo $id?>">przeglądaj galerie</a>
 			</p>
 			<div class="footer"></div>
 		</div><!-- klasa box -->
